@@ -1,12 +1,13 @@
-package net.happiness.model;
+package net.happiness.model.catalog;
 
-import net.happiness.iterator.impl.ComicStoreIterator;
-import net.happiness.iterator.ProductIterator;
+import net.happiness.iterator.ComicStoreIterator;
+import net.happiness.model.product.Product;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class ComicStoreCatalog {
+public class ComicStoreCatalog implements StoreCatalog {
 
     private final List<Product> catalog;
 
@@ -15,7 +16,8 @@ public class ComicStoreCatalog {
         fillCatalog();
     }
 
-    public ProductIterator iterator() {
+    @Override
+    public Iterator<Product> iterator() {
         return new ComicStoreIterator(catalog);
     }
 

@@ -1,4 +1,4 @@
-package net.happiness.model;
+package net.happiness.model.product;
 
 public class Product {
 

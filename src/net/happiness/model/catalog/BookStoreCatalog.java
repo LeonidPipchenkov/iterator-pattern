@@ -1,9 +1,11 @@
-package net.happiness.model;
+package net.happiness.model.catalog;
 
-import net.happiness.iterator.ProductIterator;
-import net.happiness.iterator.impl.BookStoreIterator;
+import net.happiness.iterator.BookStoreIterator;
+import net.happiness.model.product.Product;
 
-public class BookStoreCatalog {
+import java.util.Iterator;
+
+public class BookStoreCatalog implements StoreCatalog {
 
     private static final int MAX_ITEMS = 5;
 
@@ -15,7 +17,8 @@ public class BookStoreCatalog {
         fillCatalog();
     }
 
-    public ProductIterator iterator() {
+    @Override
+    public Iterator<Product> iterator() {
         return new BookStoreIterator(catalog);
     }
 

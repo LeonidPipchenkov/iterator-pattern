@@ -1,11 +1,11 @@
-package net.happiness.iterator.impl;
+package net.happiness.iterator;
 
-import net.happiness.iterator.ProductIterator;
-import net.happiness.model.Product;
+import net.happiness.model.product.Product;
 
+import java.util.Iterator;
 import java.util.List;
 
-public class ComicStoreIterator implements ProductIterator {
+public class ComicStoreIterator implements Iterator<Product> {
 
     private final List<Product> catalog;
     private int position = -1;
