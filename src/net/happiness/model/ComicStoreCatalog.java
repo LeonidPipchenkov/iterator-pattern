@@ -1,6 +1,6 @@
 package net.happiness.model;
 
-import net.happiness.iterator.ComicStoreIterator;
+import net.happiness.iterator.impl.ComicStoreIterator;
 import net.happiness.iterator.ProductIterator;
 
 import java.util.ArrayList;

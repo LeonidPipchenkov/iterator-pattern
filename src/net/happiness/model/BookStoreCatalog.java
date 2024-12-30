@@ -1,5 +1,8 @@
 package net.happiness.model;
 
+import net.happiness.iterator.ProductIterator;
+import net.happiness.iterator.impl.BookStoreIterator;
+
 public class BookStoreCatalog {
 
     private static final int MAX_ITEMS = 5;
@@ -12,8 +15,8 @@ public class BookStoreCatalog {
         fillCatalog();
     }
 
-    public Product[] getCatalog() {
-        return catalog;
+    public ProductIterator iterator() {
+        return new BookStoreIterator(catalog);
     }
 
     private void fillCatalog() {
